@@ -6,6 +6,9 @@
         "no-console": false,
         "semicolon": {
             "options": "never"
+        },
+        "interface-name": {
+            "options": "never-prefix"
         }
     },
     "rulesDirectory": []

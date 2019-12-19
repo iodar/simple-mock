@@ -1,11 +1,12 @@
 import express from "express"
 import { Logger } from "./src/utils"
 
-const app = express()
 const serverOptions = {
     host: "0.0.0.0",
     port: 3000,
 }
+
+const app = express()
 const l = new Logger("index.ts")
 
 app.get("/", (req, res, next) => {
