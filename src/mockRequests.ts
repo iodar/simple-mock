@@ -4,7 +4,7 @@ interface MockOptions {
 }
 
 interface HttpCallParameters {
-    protcol: string
+    protocol: string
     host: string
     resource: string
 }
@@ -13,12 +13,12 @@ export function mockFor(options: MockOptions) {}
 
 export function desctructUrl(url: string): HttpCallParameters {
     // http://somehost/api/v1/foo?bar=baz
-    const [protcol, hostNameAndResource] = url.split("://")
-    const [host] = hostNameAndResource.split("/").slice(0, 1)
-    const [resource] = hostNameAndResource.split("/").slice(1)
+    const [protocol, hostNameAndResource] = url.split("://")
+    const host = hostNameAndResource.split("/")[0]
+    const resource = hostNameAndResource.split(/\/(.+)/)[1]
     return {
         host,
-        protcol,
+        protocol,
         resource,
     }
 }
