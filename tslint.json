@@ -9,7 +9,8 @@
         },
         "interface-name": {
             "options": "never-prefix"
-        }
+        },
+        "ordered-imports": false
     },
     "rulesDirectory": []
 }
