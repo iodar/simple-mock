@@ -9,7 +9,7 @@ describe("Destruction of urls", () => {
             expect(destructedUrl).to.be.deep.eq({
                 protocol: "http",
                 host: "1.1.1.1",
-                resource: "someinfo?is=is",
+                resource: "some/info?is=is",
             })
         })
     })

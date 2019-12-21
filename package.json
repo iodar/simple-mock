@@ -17,7 +17,8 @@
   "license": "MIT",
   "scripts": {
     "start": "ts-node index.ts",
-    "test": "mocha --require ts-node/register --reporter dot --extension ts test/**/*.spec.ts"
+    "test": "mocha --require ts-node/register --reporter dot --extension ts test/**/*.spec.ts",
+    "test:watch": "mocha --require ts-node/register --reporter min --watch --extension ts --watch-extension ts test/**/*.spec.ts"
   },
   "dependencies": {
     "ts-node": "^8.5.4"
